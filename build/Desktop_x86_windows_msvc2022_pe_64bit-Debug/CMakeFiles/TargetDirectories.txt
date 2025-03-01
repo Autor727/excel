@@ -1,0 +1,8 @@
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/untitled.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/edit_cache.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/rebuild_cache.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/list_install_components.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/install.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/install/local.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/untitled_autogen_timestamp_deps.dir
+F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/untitled_autogen.dir

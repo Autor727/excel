@@ -1,0 +1,19 @@
+# ninja log v6
+2597	2847	7623381031702557	excel.exe	4a64ef96a942c128
+28	959	7623418983144753	excel_autogen/timestamp	b60b25eca4947d29
+28	959	7623418983144753	excel_autogen/mocs_compilation.cpp	b60b25eca4947d29
+28	959	7623418983144753	F:/Qt/excel/build/excel_autogen/timestamp	b60b25eca4947d29
+971	2353	7623418984698472	CMakeFiles/excel.dir/excel_autogen/mocs_compilation.cpp.obj	40d1b557c04b1cbe
+28	959	7623418983144753	F:/Qt/excel/build/excel_autogen/mocs_compilation.cpp	b60b25eca4947d29
+1131	2777	7624226148627164	CMakeFiles/untitled.dir/main.cpp.obj	6aeb1d015fba4483
+1021	1106	7623381015937738	CMakeFiles/excel.dir/data.cpp.obj	638c101c54f5cf27
+983	2349	7623418984818880	CMakeFiles/excel.dir/main.cpp.obj	af694e5b9101d6c5
+994	2841	7623418984929093	CMakeFiles/excel.dir/mainwindow.cpp.obj	f16c2b9045b8476
+27	337	7624226396317862	untitled_autogen/timestamp	7cf4b9a36b5e3078
+27	337	7624226396317862	untitled_autogen/mocs_compilation.cpp	7cf4b9a36b5e3078
+27	337	7624226396317862	F:/Qt/excel/build/untitled_autogen/mocs_compilation.cpp	7cf4b9a36b5e3078
+27	337	7624226396317862	F:/Qt/excel/build/untitled_autogen/timestamp	7cf4b9a36b5e3078
+1119	2830	7624226148507852	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.obj	f8d7912252e2e357
+348	2346	7624226399524862	CMakeFiles/untitled.dir/mainwindow.cpp.obj	748e8851193b0ef5
+385	1843	7624219645652277	CMakeFiles/untitled.dir/data.cpp.obj	9bb1e0e804283264
+2346	3124	7624226419505959	untitled.exe	f5f7a707e49f514d
