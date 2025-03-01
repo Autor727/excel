@@ -1,6 +1,8 @@
 #include "data.h"
 #include <QAxObject>
+#include<QMessageBox>
 #include<QDebug>
+#include<QDir>
 
 //构造函数
 Data::Data(QObject *parent):excel(nullptr)
@@ -49,7 +51,8 @@ bool Data::loadFromFile(const QString &fileName)
 {
     excel=new QAxObject("Excel.Application", nullptr);//创建excel应用对象
     if (!excel || excel->isNull()) {
-        qDebug() << "Failed to create Excel application object.";
+        QMessageBox::critical(nullptr, "Error",
+            "Failed to create Excel object. Please ensure Microsoft Excel is installed.");
         return 0;
     }
     excel->dynamicCall("SetVisible(bool)",false);//不显示excel页面
@@ -86,45 +89,49 @@ bool Data::loadFromFile(const QString &fileName)
 }
 
 //保存数据到excel文件
-bool Data::saveToFile(const QString&filePath)
+bool Data::saveToFile(const QString &fileName)
 {
-    //下面这段和打开文件的操作是一样的，都是创建一个excel的接口来把data中的数据写入excel
-    excel=new QAxObject("Excel.Application",this);
-    if(!excel||excel->isNull())
-    {
-        qDebug()<<"Failed to create Excel application object.";
-        return 0;
+    if (!excel || excel->isNull()) {
+        QMessageBox::critical(nullptr, "Error", "Failed to create Excel object. Please ensure Microsoft Excel is installed.");
+        return false;
     }
-    excel->dynamicCall("setVisible(bool)",false);
-    QAxObject*workbooks=excel->querySubObject("workboos");
-    workbook=workbooks->querySubObject("Add");
-    worksheet=workbook->querySubObject("Worksheets(int)",1);
+    excel->dynamicCall("SetVisible(bool Visible)", false);
+    QAxObject *workbooks = excel->querySubObject("Workbooks");
+    workbook = workbooks->querySubObject("Add");
+    worksheet = workbook->querySubObject("Worksheets(int)", 1);
+    int rowCount = tableData.size();
+    int columnCount = tableData.empty() ? 0 : tableData[0].size();
 
-    int rowCount=tableData.size();
-    int columnCount=tableData.empty()?0:tableData[0].size();
-
-    //将数据转换成QVariantList可以批量写入
     QVariantList varRows;
-    for(int i=0;i<rowCount;i++)
-    {
+    for (int i = 0; i < rowCount; ++i) {
         QVariantList varColumns;
-        for(int j=0;j<columnCount;j++)
-        {
+        for (int j = 0; j < columnCount; ++j) {
             varColumns.append(QVariant(tableData[i][j]));
         }
-        varRows.append(QVariant(varColumns));//将一行数据添加到对应的行集合中
+        varRows.append(QVariant(varColumns));
     }
 
-    //将数据写入excel
-    QVariant var=QVariant(varRows);
-    QAxObject*range=worksheet->querySubObject("Range(const QString&)","A1");//从A1开始写入
-    range->setProperty("Value",var);
-    workbook->dynamicCall("SaveAs(const QString&)",filePath);
+    QVariant var = QVariant(varRows);
+    QAxObject *range = worksheet->querySubObject("Range(const QString&)", QString("A1:%1%2").arg(QChar('A' + columnCount - 1)).arg(rowCount));
+    range->setProperty("Value", var);
+
+    // 确保文件名有正确的扩展名
+    QString safeFileName = fileName;
+    if (!safeFileName.endsWith(".xlsx", Qt::CaseInsensitive) && !safeFileName.endsWith(".xls", Qt::CaseInsensitive)) {
+        safeFileName += ".xlsx";  // 默认使用 .xlsx 扩展名
+    }
+
+    // 指定文件格式
+    int fileFormat = (safeFileName.endsWith(".xlsx", Qt::CaseInsensitive)) ? 51 : 56; // 51 是 .xlsx 格式，56 是 .xls 格式
+
+    //以制定的文件格式和扩展名保存文件
+    workbook->dynamicCall("SaveAs(const QString&, int)", QDir::toNativeSeparators(safeFileName), fileFormat);
     workbook->dynamicCall("Close()");
     excel->dynamicCall("Quit()");
     delete excel;
-    excel=nullptr;
-    return 1;
+    excel = nullptr;
+
+    return true;
 }
 
 //获取单元格的数据

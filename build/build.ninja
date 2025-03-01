@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: untitled
+# Project: excel
 # Configurations: Debug
 # =============================================================================
 
@@ -41,64 +41,64 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = F$:/Qt/excel/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled
+# Object build statements for EXECUTABLE target excel
 
 
 #############################################
-# Order-only phony target for untitled
+# Order-only phony target for excel
 
-build cmake_object_order_depends_target_untitled: phony || untitled_autogen untitled_autogen/mocs_compilation.cpp untitled_autogen/timestamp untitled_autogen_timestamp_deps
+build cmake_object_order_depends_target_excel: phony || excel_autogen excel_autogen/mocs_compilation.cpp excel_autogen/timestamp excel_autogen_timestamp_deps
 
-build CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug F$:/Qt/excel/build/untitled_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_untitled
+build CMakeFiles/excel.dir/excel_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__excel_unscanned_Debug F$:/Qt/excel/build/excel_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_excel
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\untitled.dir\untitled_autogen\mocs_compilation.cpp.obj.d
+  DEP_FILE = CMakeFiles\excel.dir\excel_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
-  OBJECT_DIR = CMakeFiles\untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\untitled_autogen
+  INCLUDES = -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
+  OBJECT_DIR = CMakeFiles\excel.dir
+  OBJECT_FILE_DIR = CMakeFiles\excel.dir\excel_autogen
 
-build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug F$:/Qt/excel/main.cpp || cmake_object_order_depends_target_untitled
+build CMakeFiles/excel.dir/main.cpp.obj: CXX_COMPILER__excel_unscanned_Debug F$:/Qt/excel/main.cpp || cmake_object_order_depends_target_excel
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\untitled.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\excel.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
-  OBJECT_DIR = CMakeFiles\untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  INCLUDES = -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
+  OBJECT_DIR = CMakeFiles\excel.dir
+  OBJECT_FILE_DIR = CMakeFiles\excel.dir
 
-build CMakeFiles/untitled.dir/mainwindow.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug F$:/Qt/excel/mainwindow.cpp || cmake_object_order_depends_target_untitled
+build CMakeFiles/excel.dir/mainwindow.cpp.obj: CXX_COMPILER__excel_unscanned_Debug F$:/Qt/excel/mainwindow.cpp || cmake_object_order_depends_target_excel
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\untitled.dir\mainwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\excel.dir\mainwindow.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
-  OBJECT_DIR = CMakeFiles\untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  INCLUDES = -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
+  OBJECT_DIR = CMakeFiles\excel.dir
+  OBJECT_FILE_DIR = CMakeFiles\excel.dir
 
-build CMakeFiles/untitled.dir/data.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug F$:/Qt/excel/data.cpp || cmake_object_order_depends_target_untitled
+build CMakeFiles/excel.dir/data.cpp.obj: CXX_COMPILER__excel_unscanned_Debug F$:/Qt/excel/data.cpp || cmake_object_order_depends_target_excel
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\untitled.dir\data.cpp.obj.d
+  DEP_FILE = CMakeFiles\excel.dir\data.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
-  OBJECT_DIR = CMakeFiles\untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  INCLUDES = -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer
+  OBJECT_DIR = CMakeFiles\excel.dir
+  OBJECT_FILE_DIR = CMakeFiles\excel.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled
+# Link build statements for EXECUTABLE target excel
 
 
 #############################################
-# Link the executable untitled.exe
+# Link the executable excel.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.obj CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/mainwindow.cpp.obj CMakeFiles/untitled.dir/data.cpp.obj | C$:/Qt/6.5.3/mingw_64/lib/libQt6AxContainer.a C$:/Qt/6.5.3/mingw_64/lib/libQt6AxBase.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a || untitled_autogen untitled_autogen_timestamp_deps
+build excel.exe: CXX_EXECUTABLE_LINKER__excel_Debug CMakeFiles/excel.dir/excel_autogen/mocs_compilation.cpp.obj CMakeFiles/excel.dir/main.cpp.obj CMakeFiles/excel.dir/mainwindow.cpp.obj CMakeFiles/excel.dir/data.cpp.obj | C$:/Qt/6.5.3/mingw_64/lib/libQt6AxContainer.a C$:/Qt/6.5.3/mingw_64/lib/libQt6AxBase.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.5.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a || excel_autogen excel_autogen_timestamp_deps
   FLAGS = -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.5.3/mingw_64/lib/libQt6AxContainer.a  C:/Qt/6.5.3/mingw_64/lib/libQt6AxBase.a  -ladvapi32  -lgdi32  -lole32  -loleaut32  -luser32  -luuid  C:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  C:/Qt/6.5.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_DIR = CMakeFiles\excel.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = untitled.exe
-  TARGET_IMPLIB = libuntitled.dll.a
-  TARGET_PDB = untitled.exe.dbg
+  TARGET_FILE = excel.exe
+  TARGET_IMPLIB = libexcel.dll.a
+  TARGET_PDB = excel.exe.dbg
 
 
 #############################################
@@ -168,37 +168,37 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 
 #############################################
-# Utility command for untitled_autogen_timestamp_deps
+# Utility command for excel_autogen_timestamp_deps
 
-build untitled_autogen_timestamp_deps: phony
-
-
-#############################################
-# Utility command for untitled_autogen
-
-build untitled_autogen: phony CMakeFiles/untitled_autogen untitled_autogen/include/ui_mainwindow.h untitled_autogen/timestamp untitled_autogen/mocs_compilation.cpp untitled_autogen_timestamp_deps
+build excel_autogen_timestamp_deps: phony
 
 
 #############################################
-# Custom command for untitled_autogen\timestamp
+# Utility command for excel_autogen
 
-build untitled_autogen/timestamp untitled_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}untitled_autogen/timestamp ${cmake_ninja_workdir}untitled_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.5.3/mingw_64/./bin/moc.exe C$:/Qt/6.5.3/mingw_64/./bin/uic.exe || untitled_autogen_timestamp_deps
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Qt\excel\build && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen F:/Qt/excel/build/CMakeFiles/untitled_autogen.dir/AutogenInfo.json Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch F:/Qt/excel/build/untitled_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile F:/Qt/excel F:/Qt/excel F:/Qt/excel/build F:/Qt/excel/build F:/Qt/excel/build/untitled_autogen/deps F:/Qt/excel/build/CMakeFiles/d/9a982d5852b58b4221f5b70753b36ab8c88112160f877b298b274f69bc91212f.d"
-  DESC = Automatic MOC and UIC for target untitled
-  depfile = CMakeFiles\d\9a982d5852b58b4221f5b70753b36ab8c88112160f877b298b274f69bc91212f.d
+build excel_autogen: phony CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h excel_autogen/timestamp excel_autogen/mocs_compilation.cpp excel_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for excel_autogen\timestamp
+
+build excel_autogen/timestamp excel_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}excel_autogen/timestamp ${cmake_ninja_workdir}excel_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.5.3/mingw_64/./bin/moc.exe C$:/Qt/6.5.3/mingw_64/./bin/uic.exe || excel_autogen_timestamp_deps
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D F:\Qt\excel\build && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen F:/Qt/excel/build/CMakeFiles/excel_autogen.dir/AutogenInfo.json Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch F:/Qt/excel/build/excel_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile F:/Qt/excel F:/Qt/excel F:/Qt/excel/build F:/Qt/excel/build F:/Qt/excel/build/excel_autogen/deps F:/Qt/excel/build/CMakeFiles/d/24ad45f0132a28bcb03cf15737db105b730699d84f972010638e1db3694b7fc9.d"
+  DESC = Automatic MOC and UIC for target excel
+  depfile = CMakeFiles\d\24ad45f0132a28bcb03cf15737db105b730699d84f972010638e1db3694b7fc9.d
   deps = gcc
   restat = 1
 
 
 #############################################
-# Phony custom command for CMakeFiles\untitled_autogen
+# Phony custom command for CMakeFiles\excel_autogen
 
-build CMakeFiles/untitled_autogen untitled_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/untitled_autogen ${cmake_ninja_workdir}untitled_autogen/include/ui_mainwindow.h: phony untitled_autogen/timestamp || untitled_autogen_timestamp_deps
+build CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/excel_autogen ${cmake_ninja_workdir}excel_autogen/include/ui_mainwindow.h: phony excel_autogen/timestamp || excel_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
 
-build untitled: phony untitled.exe
+build excel: phony excel.exe
 
 # =============================================================================
 # Folder targets.
@@ -208,7 +208,7 @@ build untitled: phony untitled.exe
 #############################################
 # Folder: F:/Qt/excel/build
 
-build all: phony untitled.exe
+build all: phony excel.exe
 
 # =============================================================================
 # Built-in targets

@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     //链接按钮和槽
     connect(ui->actionOPen,&QAction::triggered,this,&MainWindow::openFile);
     connect(ui->actionSave,&QAction::triggered,this,&MainWindow::saveFile);
+    connect(ui->actionOPen,&QAction::triggered,this,&MainWindow::newFile);
     //链接单元格信号变化和槽函数
      connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::on_tableWidget_cellChanged);
 }
@@ -66,12 +67,15 @@ void MainWindow::saveFile()
         QMessageBox::warning(this,tr("Error"),tr("route does not exist!"));
         return;
     }
+    qDebug()<<"next";
+    data->excel = new QAxObject("Excel.Application",this);
     //把表格中的数据保存到data中
     if (data->saveToFile(fileName)) {
         QMessageBox::information(this, tr("Save Excel File"), tr("File saved successfully!"));
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Failed to save the Excel file."));
     }
+    qDebug()<<"finished";
 }
 
 void MainWindow::on_tableWidget_cellChanged(int row, int col)
@@ -81,5 +85,10 @@ void MainWindow::on_tableWidget_cellChanged(int row, int col)
     {
      data->setCellData(row,col,item->text());
     }
+}
+
+void MainWindow::newFile()
+{
+
 }
 

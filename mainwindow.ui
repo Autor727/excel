@@ -40,6 +40,7 @@
     </property>
     <addaction name="actionOPen"/>
     <addaction name="actionSave"/>
+    <addaction name="actionNew"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -52,6 +53,11 @@
   <action name="actionSave">
    <property name="text">
     <string>保存</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>新建</string>
    </property>
   </action>
  </widget>

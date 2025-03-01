@@ -1,26 +1,26 @@
 [
 {
   "directory": "F:/Qt/excel/build",
-  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\untitled.dir\\untitled_autogen\\mocs_compilation.cpp.obj -c F:\\Qt\\excel\\build\\untitled_autogen\\mocs_compilation.cpp",
-  "file": "F:\\Qt\\excel\\build\\untitled_autogen\\mocs_compilation.cpp",
-  "output": "CMakeFiles\\untitled.dir\\untitled_autogen\\mocs_compilation.cpp.obj"
+  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\excel.dir\\excel_autogen\\mocs_compilation.cpp.obj -c F:\\Qt\\excel\\build\\excel_autogen\\mocs_compilation.cpp",
+  "file": "F:\\Qt\\excel\\build\\excel_autogen\\mocs_compilation.cpp",
+  "output": "CMakeFiles\\excel.dir\\excel_autogen\\mocs_compilation.cpp.obj"
 },
 {
   "directory": "F:/Qt/excel/build",
-  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\untitled.dir\\main.cpp.obj -c F:\\Qt\\excel\\main.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\excel.dir\\main.cpp.obj -c F:\\Qt\\excel\\main.cpp",
   "file": "F:\\Qt\\excel\\main.cpp",
-  "output": "CMakeFiles\\untitled.dir\\main.cpp.obj"
+  "output": "CMakeFiles\\excel.dir\\main.cpp.obj"
 },
 {
   "directory": "F:/Qt/excel/build",
-  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\untitled.dir\\mainwindow.cpp.obj -c F:\\Qt\\excel\\mainwindow.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\excel.dir\\mainwindow.cpp.obj -c F:\\Qt\\excel\\mainwindow.cpp",
   "file": "F:\\Qt\\excel\\mainwindow.cpp",
-  "output": "CMakeFiles\\untitled.dir\\mainwindow.cpp.obj"
+  "output": "CMakeFiles\\excel.dir\\mainwindow.cpp.obj"
 },
 {
   "directory": "F:/Qt/excel/build",
-  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/untitled_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\untitled.dir\\data.cpp.obj -c F:\\Qt\\excel\\data.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_AXCONTAINER_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IF:/Qt/excel/build/excel_autogen/include -isystem C:/Qt/6.5.3/mingw_64/include/QtCore -isystem C:/Qt/6.5.3/mingw_64/include -isystem C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.5.3/mingw_64/include/QtGui -isystem C:/Qt/6.5.3/mingw_64/include/QtAxContainer -g -std=gnu++17 -o CMakeFiles\\excel.dir\\data.cpp.obj -c F:\\Qt\\excel\\data.cpp",
   "file": "F:\\Qt\\excel\\data.cpp",
-  "output": "CMakeFiles\\untitled.dir\\data.cpp.obj"
+  "output": "CMakeFiles\\excel.dir\\data.cpp.obj"
 }
 ]

@@ -39,43 +39,43 @@ namespace {
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
-    "on_tableWidget_cellChanged",
-    "",
-    "row",
-    "column",
     "openFile",
-    "saveFile"
+    "",
+    "saveFile",
+    "on_tableWidget_cellChanged",
+    "row",
+    "column"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     uint offsetsAndSizes[14];
     char stringdata0[11];
-    char stringdata1[27];
+    char stringdata1[9];
     char stringdata2[1];
-    char stringdata3[4];
-    char stringdata4[7];
-    char stringdata5[9];
-    char stringdata6[9];
+    char stringdata3[9];
+    char stringdata4[27];
+    char stringdata5[4];
+    char stringdata6[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_stringdata_CLASSMainWindowENDCLASS = {
     {
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
-        QT_MOC_LITERAL(11, 26),  // "on_tableWidget_cellChanged"
-        QT_MOC_LITERAL(38, 0),  // ""
-        QT_MOC_LITERAL(39, 3),  // "row"
-        QT_MOC_LITERAL(43, 6),  // "column"
-        QT_MOC_LITERAL(50, 8),  // "openFile"
-        QT_MOC_LITERAL(59, 8)   // "saveFile"
+        QT_MOC_LITERAL(11, 8),  // "openFile"
+        QT_MOC_LITERAL(20, 0),  // ""
+        QT_MOC_LITERAL(21, 8),  // "saveFile"
+        QT_MOC_LITERAL(30, 26),  // "on_tableWidget_cellChanged"
+        QT_MOC_LITERAL(57, 3),  // "row"
+        QT_MOC_LITERAL(61, 6)   // "column"
     },
     "MainWindow",
-    "on_tableWidget_cellChanged",
-    "",
-    "row",
-    "column",
     "openFile",
-    "saveFile"
+    "",
+    "saveFile",
+    "on_tableWidget_cellChanged",
+    "row",
+    "column"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -95,14 +95,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   32,    2, 0x08,    1 /* Private */,
-       5,    0,   37,    2, 0x08,    4 /* Private */,
-       6,    0,   38,    2, 0x08,    5 /* Private */,
+       1,    0,   32,    2, 0x08,    1 /* Private */,
+       3,    0,   33,    2, 0x08,    2 /* Private */,
+       4,    2,   34,    2, 0x08,    3 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    5,    6,
 
        0        // eod
 };
@@ -116,14 +116,14 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'on_tableWidget_cellChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'openFile'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'saveFile'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_tableWidget_cellChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
     nullptr
 } };
@@ -134,9 +134,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_tableWidget_cellChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 1: _t->openFile(); break;
-        case 2: _t->saveFile(); break;
+        case 0: _t->openFile(); break;
+        case 1: _t->saveFile(); break;
+        case 2: _t->on_tableWidget_cellChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }

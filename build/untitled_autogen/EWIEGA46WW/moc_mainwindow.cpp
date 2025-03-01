@@ -42,9 +42,9 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "openFile",
     "",
     "saveFile",
-    "onCellChanged",
+    "on_tableWidget_cellChanged",
     "row",
-    "col"
+    "column"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
@@ -53,9 +53,9 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata1[9];
     char stringdata2[1];
     char stringdata3[9];
-    char stringdata4[14];
+    char stringdata4[27];
     char stringdata5[4];
-    char stringdata6[4];
+    char stringdata6[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -65,17 +65,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(11, 8),  // "openFile"
         QT_MOC_LITERAL(20, 0),  // ""
         QT_MOC_LITERAL(21, 8),  // "saveFile"
-        QT_MOC_LITERAL(30, 13),  // "onCellChanged"
-        QT_MOC_LITERAL(44, 3),  // "row"
-        QT_MOC_LITERAL(48, 3)   // "col"
+        QT_MOC_LITERAL(30, 26),  // "on_tableWidget_cellChanged"
+        QT_MOC_LITERAL(57, 3),  // "row"
+        QT_MOC_LITERAL(61, 6)   // "column"
     },
     "MainWindow",
     "openFile",
     "",
     "saveFile",
-    "onCellChanged",
+    "on_tableWidget_cellChanged",
     "row",
-    "col"
+    "column"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -120,7 +120,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'saveFile'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onCellChanged'
+        // method 'on_tableWidget_cellChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -136,7 +136,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->openFile(); break;
         case 1: _t->saveFile(); break;
-        case 2: _t->onCellChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 2: _t->on_tableWidget_cellChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }

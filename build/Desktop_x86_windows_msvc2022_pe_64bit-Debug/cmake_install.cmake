@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/untitled.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

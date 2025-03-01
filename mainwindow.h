@@ -24,6 +24,7 @@ private slots:
     void saveFile();//保存文件
     //用来接受如果单元格内容发生变化，那么data也要发生变化
     void on_tableWidget_cellChanged(int row, int column);
+    void newFile();//创建一个空白的excel表格
 
 private:
     Ui::MainWindow *ui;
