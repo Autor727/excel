@@ -352,7 +352,8 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
-		]
+		],
+		[ "F:/Qt/excel/newdialog.h", "MU", "EWIEGA46WW/moc_newdialog.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/include",
@@ -412,7 +413,8 @@
 	[
 		[ "F:/Qt/excel/data.cpp", "MU", null ],
 		[ "F:/Qt/excel/main.cpp", "MU", null ],
-		[ "F:/Qt/excel/mainwindow.cpp", "MU", null ]
+		[ "F:/Qt/excel/mainwindow.cpp", "MU", null ],
+		[ "F:/Qt/excel/newdialog.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

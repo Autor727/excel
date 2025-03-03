@@ -17,15 +17,20 @@ set(PROJECT_SOURCES
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    data.h
+
+
+
     data.cpp
+    data.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(excel
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        newDialog.ui
+        newdialog.h newdialog.cpp newdialog.ui
+
+
 
     )
 else()

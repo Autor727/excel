@@ -91,6 +91,7 @@ bool Data::loadFromFile(const QString &fileName)
 //保存数据到excel文件
 bool Data::saveToFile(const QString &fileName)
 {
+    //此处跟打开是一样的，只是把数据写入到excel中
     if (!excel || excel->isNull()) {
         QMessageBox::critical(nullptr, "Error", "Failed to create Excel object. Please ensure Microsoft Excel is installed.");
         return false;
@@ -102,6 +103,7 @@ bool Data::saveToFile(const QString &fileName)
     int rowCount = tableData.size();
     int columnCount = tableData.empty() ? 0 : tableData[0].size();
 
+    // 准备数据以便写入 Excel
     QVariantList varRows;
     for (int i = 0; i < rowCount; ++i) {
         QVariantList varColumns;
@@ -111,8 +113,13 @@ bool Data::saveToFile(const QString &fileName)
         varRows.append(QVariant(varColumns));
     }
 
+    // 将数据转换为 QVariant 以便设置到 Excel 单元格中
     QVariant var = QVariant(varRows);
+
+    // 获取要写入数据的范围对象
     QAxObject *range = worksheet->querySubObject("Range(const QString&)", QString("A1:%1%2").arg(QChar('A' + columnCount - 1)).arg(rowCount));
+
+    // 将数据写入到 Excel 单元格中
     range->setProperty("Value", var);
 
     // 确保文件名有正确的扩展名
@@ -124,13 +131,18 @@ bool Data::saveToFile(const QString &fileName)
     // 指定文件格式
     int fileFormat = (safeFileName.endsWith(".xlsx", Qt::CaseInsensitive)) ? 51 : 56; // 51 是 .xlsx 格式，56 是 .xls 格式
 
-    //以制定的文件格式和扩展名保存文件
+    // 保存工作簿到指定文件
     workbook->dynamicCall("SaveAs(const QString&, int)", QDir::toNativeSeparators(safeFileName), fileFormat);
+
+    // 关闭工作簿
     workbook->dynamicCall("Close()");
+
+    // 退出 Excel 应用程序
     excel->dynamicCall("Quit()");
+
+    // 释放 Excel 对象
     delete excel;
     excel = nullptr;
-
     return true;
 }
 

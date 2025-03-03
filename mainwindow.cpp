@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QDialog>
+#include "newdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     //链接按钮和槽
     connect(ui->actionOPen,&QAction::triggered,this,&MainWindow::openFile);
     connect(ui->actionSave,&QAction::triggered,this,&MainWindow::saveFile);
-    connect(ui->actionOPen,&QAction::triggered,this,&MainWindow::newFile);
+    connect(ui->actionNew,&QAction::triggered,this,&MainWindow::newFile);
     //链接单元格信号变化和槽函数
      connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::on_tableWidget_cellChanged);
 }
@@ -67,7 +69,6 @@ void MainWindow::saveFile()
         QMessageBox::warning(this,tr("Error"),tr("route does not exist!"));
         return;
     }
-    qDebug()<<"next";
     data->excel = new QAxObject("Excel.Application",this);
     //把表格中的数据保存到data中
     if (data->saveToFile(fileName)) {
@@ -75,7 +76,6 @@ void MainWindow::saveFile()
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Failed to save the Excel file."));
     }
-    qDebug()<<"finished";
 }
 
 void MainWindow::on_tableWidget_cellChanged(int row, int col)
@@ -89,6 +89,16 @@ void MainWindow::on_tableWidget_cellChanged(int row, int col)
 
 void MainWindow::newFile()
 {
-
+    newDialog *dialog=new newDialog();
+    connect(dialog,&newDialog::Created,this,&MainWindow::tableCreated);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
 }
 
+void MainWindow::tableCreated(int rows,int cols)
+{
+    ui->tableWidget->setRowCount(rows);
+    ui->tableWidget->setColumnCount(cols);
+    data->setRowCount(rows);
+    data->setColumnCount(cols);
+}
