@@ -27,10 +27,13 @@ class Ui_MainWindow
 public:
     QAction *actionOPen;
     QAction *actionSave;
+    QAction *actionNew;
     QWidget *centralwidget;
     QTableWidget *tableWidget;
     QMenuBar *menubar;
     QMenu *menu;
+    QMenu *menuInsert;
+    QMenu *menuDelete;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -42,6 +45,8 @@ public:
         actionOPen->setObjectName("actionOPen");
         actionSave = new QAction(MainWindow);
         actionSave->setObjectName("actionSave");
+        actionNew = new QAction(MainWindow);
+        actionNew->setObjectName("actionNew");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         tableWidget = new QTableWidget(centralwidget);
@@ -53,14 +58,21 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 17));
         menu = new QMenu(menubar);
         menu->setObjectName("menu");
+        menuInsert = new QMenu(menubar);
+        menuInsert->setObjectName("menuInsert");
+        menuDelete = new QMenu(menubar);
+        menuDelete->setObjectName("menuDelete");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menu->menuAction());
+        menubar->addAction(menuInsert->menuAction());
+        menubar->addAction(menuDelete->menuAction());
         menu->addAction(actionOPen);
         menu->addAction(actionSave);
+        menu->addAction(actionNew);
 
         retranslateUi(MainWindow);
 
@@ -72,7 +84,10 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionOPen->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200", nullptr));
         actionSave->setText(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230", nullptr));
+        actionNew->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
+        menuInsert->setTitle(QCoreApplication::translate("MainWindow", "\346\217\222\345\205\245", nullptr));
+        menuDelete->setTitle(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
     } // retranslateUi
 
 };

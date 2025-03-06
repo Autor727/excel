@@ -24,32 +24,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>10</y>
-      <width>80</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>新增行</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>10</y>
-      <width>80</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>新增列</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -68,7 +42,16 @@
     <addaction name="actionSave"/>
     <addaction name="actionNew"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>内容</string>
+    </property>
+    <addaction name="actionInsert"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionSearch"/>
+   </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOPen">
@@ -84,6 +67,21 @@
   <action name="actionNew">
    <property name="text">
     <string>新建</string>
+   </property>
+  </action>
+  <action name="actionInsert">
+   <property name="text">
+    <string>插入</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="text">
+    <string>查询</string>
    </property>
   </action>
  </widget>

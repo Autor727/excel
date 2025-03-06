@@ -184,7 +184,7 @@ build excel_autogen_timestamp_deps: phony
 #############################################
 # Utility command for excel_autogen
 
-build excel_autogen: phony CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h excel_autogen/include/ui_newDialog.h excel_autogen/timestamp excel_autogen/mocs_compilation.cpp excel_autogen_timestamp_deps
+build excel_autogen: phony CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h excel_autogen/include/ui_newdialog.h excel_autogen/timestamp excel_autogen/mocs_compilation.cpp excel_autogen_timestamp_deps
 
 
 #############################################
@@ -201,7 +201,7 @@ build excel_autogen/timestamp excel_autogen/mocs_compilation.cpp | ${cmake_ninja
 #############################################
 # Phony custom command for CMakeFiles\excel_autogen
 
-build CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h excel_autogen/include/ui_newDialog.h | ${cmake_ninja_workdir}CMakeFiles/excel_autogen ${cmake_ninja_workdir}excel_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}excel_autogen/include/ui_newDialog.h: phony excel_autogen/timestamp || excel_autogen_timestamp_deps
+build CMakeFiles/excel_autogen excel_autogen/include/ui_mainwindow.h excel_autogen/include/ui_newdialog.h | ${cmake_ninja_workdir}CMakeFiles/excel_autogen ${cmake_ninja_workdir}excel_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}excel_autogen/include/ui_newdialog.h: phony excel_autogen/timestamp || excel_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

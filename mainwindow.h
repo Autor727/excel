@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "data.h"
 #include <QTableWidget>
+#include <QMouseEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,9 +27,13 @@ private slots:
     void on_tableWidget_cellChanged(int row, int column);
     void newFile();//用于信号连接，接受来自dialog的行数和列数
     void tableCreated(int,int);//创建一个空白的excel表格
+    void insert();
+    void Delete();
+    void searchInTable();
 
 private:
     Ui::MainWindow *ui;
-    Data*data;
+    QTableWidget *tableWidget;
+    Data *data;
 };
 #endif // MAINWINDOW_H

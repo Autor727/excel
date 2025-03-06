@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QDialog>
 #include "newdialog.h"
+#include <QInputDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,8 +21,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionOPen,&QAction::triggered,this,&MainWindow::openFile);
     connect(ui->actionSave,&QAction::triggered,this,&MainWindow::saveFile);
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::newFile);
+    connect(ui->actionInsert,&QAction::triggered,this,&MainWindow::insert);
+    connect(ui->actionDelete,&QAction::triggered,this,&MainWindow::Delete);
+    connect(ui->actionSearch,&QAction::triggered,this,&MainWindow::searchInTable);
+
     //链接单元格信号变化和槽函数
-     connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::on_tableWidget_cellChanged);
+    connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::on_tableWidget_cellChanged);
 }
 
 MainWindow::~MainWindow()
@@ -78,6 +83,7 @@ void MainWindow::saveFile()
     }
 }
 
+//接受变化的单元格
 void MainWindow::on_tableWidget_cellChanged(int row, int col)
 {
     QTableWidgetItem*item=ui->tableWidget->item(row,col);
@@ -87,6 +93,7 @@ void MainWindow::on_tableWidget_cellChanged(int row, int col)
     }
 }
 
+//打开一个新的文件并发送信号
 void MainWindow::newFile()
 {
     newDialog *dialog=new newDialog();
@@ -95,10 +102,121 @@ void MainWindow::newFile()
     dialog->show();
 }
 
+//实际创建表格
 void MainWindow::tableCreated(int rows,int cols)
 {
     ui->tableWidget->setRowCount(rows);
     ui->tableWidget->setColumnCount(cols);
     data->setRowCount(rows);
     data->setColumnCount(cols);
+}
+
+void MainWindow::insert()
+{
+    // 获取选中的区域
+    QList<QTableWidgetSelectionRange> selectedRanges = ui->tableWidget->selectedRanges();
+
+    // 如果没有选中任何区域
+    if (selectedRanges.isEmpty()) {
+        QMessageBox::warning(this, tr("错误"), tr("请选中一行或一列！"));
+        return;
+    }
+
+    // 只处理第一个选中的区域
+    QTableWidgetSelectionRange range = selectedRanges.first();
+
+    // 判断是否选中了整列
+    if (range.rowCount() == ui->tableWidget->rowCount() && range.columnCount() == 1) {
+        int col = range.leftColumn(); // 获取选中的列号
+        for (auto& rowData : data->tableData) {
+            rowData.insert(rowData.begin() + col, ""); // 在数据模型中插入空列
+        }
+        ui->tableWidget->insertColumn(col); // 在表格中插入列
+        for (int i = 0; i < ui->tableWidget->rowCount(); ++i) {
+            ui->tableWidget->setItem(i, col, new QTableWidgetItem("")); // 初始化新列
+        }
+    }
+    // 判断是否选中了整行
+    else if (range.columnCount() == ui->tableWidget->columnCount() && range.rowCount() == 1) {
+        int row = range.topRow(); // 获取选中的行号
+        int cols = ui->tableWidget->columnCount();
+        data->tableData.insert(data->tableData.begin() + row, std::vector<QString>(cols, "")); // 在数据模型中插入空行
+        ui->tableWidget->insertRow(row); // 在表格中插入行
+        for (int j = 0; j < cols; ++j) {
+            ui->tableWidget->setItem(row, j, new QTableWidgetItem("")); // 初始化新行
+        }
+    }
+    // 其他情况（例如选中单个单元格或多个单元格）
+    else {
+        QMessageBox::warning(this, tr("错误"), tr("请仅选中完整的一行或一列！"));
+        return;
+    }
+}
+
+//删除
+void MainWindow::Delete()
+{
+    // 获取用户选中的区域
+    QList<QTableWidgetSelectionRange> selectedRanges = ui->tableWidget->selectedRanges();
+
+    // 如果没有选中任何区域，提示用户
+    if (selectedRanges.isEmpty()) {
+        QMessageBox::warning(this, tr("错误"), tr("请选中一行或一列！"));
+        return;
+    }
+
+    // 只处理第一个选中的区域
+    QTableWidgetSelectionRange range = selectedRanges.first();
+    // 判断是否选中了整列
+    if (range.rowCount() == ui->tableWidget->rowCount() && range.columnCount() == 1) {
+        int col = range.leftColumn(); // 获取选中的列号
+        // 从数据模型中删除该列
+        for (auto& rowData : data->tableData) {
+            if (col < rowData.size()) {
+                rowData.erase(rowData.begin() + col);
+            }
+        }
+        // 从表格界面中删除该列
+        ui->tableWidget->removeColumn(col);
+    }
+    // 判断是否选中了整行
+    else if (range.columnCount() == ui->tableWidget->columnCount() && range.rowCount() == 1) {
+        int row = range.topRow(); // 获取选中的行号
+        if (row < data->tableData.size()) {
+            data->tableData.erase(data->tableData.begin() + row);
+        }
+        // 从表格界面中删除该行
+        ui->tableWidget->removeRow(row);
+    }
+    // 其他情况（例如选中单个单元格或多个单元格），提示用户
+    else {
+        QMessageBox::warning(this, tr("错误"), tr("请仅选中完整的一行或一列！"));
+        return;
+    }
+}
+
+void MainWindow::searchInTable()
+{
+    // 获取用户输入的查询内容
+    bool ok;
+    QString searchText = QInputDialog::getText(this, tr("查询"), tr("请输入要查询的内容:"),
+                                               QLineEdit::Normal, "", &ok);
+    if (!ok || searchText.isEmpty()) {
+        // 用户取消输入或输入为空，直接返回
+        return;
+    }
+    // 遍历表格中的所有单元格
+    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
+        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
+            QTableWidgetItem* item = ui->tableWidget->item(row, col);
+            if (item && item->text() == searchText) {
+                // 找到匹配项，滚动到该单元格并选中
+                ui->tableWidget->setCurrentCell(row, col);
+                ui->tableWidget->scrollToItem(item, QAbstractItemView::PositionAtCenter);
+                return;
+            }
+        }
+    }
+    // 没有找到匹配项，显示提示
+    QMessageBox::information(this, tr("查询结果"), tr("查询内容不存在"));
 }
