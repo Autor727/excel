@@ -31,7 +31,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>17</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -49,6 +49,7 @@
     <addaction name="actionInsert"/>
     <addaction name="actionDelete"/>
     <addaction name="actionSearch"/>
+    <addaction name="actionReplace"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -81,7 +82,12 @@
   </action>
   <action name="actionSearch">
    <property name="text">
-    <string>查询</string>
+    <string>查找</string>
+   </property>
+  </action>
+  <action name="actionReplace">
+   <property name="text">
+    <string>替换</string>
    </property>
   </action>
  </widget>

@@ -23,8 +23,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::newFile);
     connect(ui->actionInsert,&QAction::triggered,this,&MainWindow::insert);
     connect(ui->actionDelete,&QAction::triggered,this,&MainWindow::Delete);
-    connect(ui->actionSearch,&QAction::triggered,this,&MainWindow::searchInTable);
-
+    connect(ui->actionSearch, &QAction::triggered, this, &MainWindow::searchInTable);
+    connect(ui->actionReplace,&QAction::triggered,this,&MainWindow::replaceInTable);
     //链接单元格信号变化和槽函数
     connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::on_tableWidget_cellChanged);
 }
@@ -164,7 +164,7 @@ void MainWindow::Delete()
         QMessageBox::warning(this, tr("错误"), tr("请选中一行或一列！"));
         return;
     }
-
+    
     // 只处理第一个选中的区域
     QTableWidgetSelectionRange range = selectedRanges.first();
     // 判断是否选中了整列
@@ -195,19 +195,17 @@ void MainWindow::Delete()
     }
 }
 
+//在表格中查询
 void MainWindow::searchInTable()
 {
-    // 获取用户输入的查询内容
     bool ok;
-    QString searchText = QInputDialog::getText(this, tr("查询"), tr("请输入要查询的内容:"),
-                                               QLineEdit::Normal, "", &ok);
+    QString searchText = QInputDialog::getText(this, tr("查找"), tr("输入要查找的内容"), QLineEdit::Normal, "", &ok);
     if (!ok || searchText.isEmpty()) {
-        // 用户取消输入或输入为空，直接返回
         return;
     }
-    // 遍历表格中的所有单元格
-    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
-        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
+
+    for (int row = 0; row < data->tableData.size(); ++row) {
+        for (int col = 0; col < data->tableData[row].size(); ++col) {
             QTableWidgetItem* item = ui->tableWidget->item(row, col);
             if (item && item->text() == searchText) {
                 // 找到匹配项，滚动到该单元格并选中
@@ -217,6 +215,39 @@ void MainWindow::searchInTable()
             }
         }
     }
-    // 没有找到匹配项，显示提示
-    QMessageBox::information(this, tr("查询结果"), tr("查询内容不存在"));
+
+    QMessageBox::information(this, tr("查找"), tr("未找到匹配项！"));
+}
+
+void MainWindow::replaceInTable()
+{
+    bool ok;
+    QString searchText = QInputDialog::getText(this, tr("替换"), tr("输入要查找的内容"), QLineEdit::Normal, "", &ok);
+    if (!ok || searchText.isEmpty()) {
+        return;
+    }
+
+    QString replaceText = QInputDialog::getText(this, tr("替换"), tr("输入替换后的内容"), QLineEdit::Normal, "", &ok);
+    if (!ok || replaceText.isEmpty()) {
+        return;
+    }
+
+    bool found = false;
+    for (int row = 0; row < data->tableData.size(); ++row) {
+        for (int col = 0; col < data->tableData[row].size(); ++col) {
+            QTableWidgetItem* item = ui->tableWidget->item(row, col);
+            if (item && item->text() == searchText) {
+                // 替换匹配项
+                item->setText(replaceText);
+                data->tableData[row][col] = replaceText;
+                found = true;
+            }
+        }
+    }
+
+    if (found) {
+        QMessageBox::information(this, tr("替换"), tr("替换完成！"));
+    } else {
+        QMessageBox::information(this, tr("替换"), tr("未找到匹配项！"));
+    }
 }

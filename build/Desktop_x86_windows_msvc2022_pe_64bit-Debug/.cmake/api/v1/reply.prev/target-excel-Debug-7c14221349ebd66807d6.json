@@ -27,26 +27,26 @@
 		],
 		"files" : 
 		[
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6AxContainer/Qt6AxContainerTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6AxContainer/Qt6AxContainerConfig.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6AxBasePrivate/Qt6AxBasePrivateTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6AxBasePrivate/Qt6AxBasePrivateConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6AxContainer/Qt6AxContainerTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6AxContainer/Qt6AxContainerConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6AxBasePrivate/Qt6AxBasePrivateTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6AxBasePrivate/Qt6AxBasePrivateConfig.cmake",
 			"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6AxContainer/Qt6AxContainerDependencies.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
-			"C:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake"
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6AxContainer/Qt6AxContainerDependencies.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
+			"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake"
 		],
 		"nodes" : 
 		[
@@ -80,13 +80,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 63,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 48,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -347,15 +347,23 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17"
+					"fragment" : "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd"
+				},
+				{
+					"backtrace" : 37,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 37,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 37,
+					"fragment" : "-utf-8"
 				}
 			],
 			"defines" : 
 			[
-				{
-					"backtrace" : 37,
-					"define" : "MINGW_HAS_SECURE_API=1"
-				},
 				{
 					"backtrace" : 6,
 					"define" : "QT_AXCONTAINER_LIB"
@@ -367,10 +375,6 @@
 				{
 					"backtrace" : 6,
 					"define" : "QT_GUI_LIB"
-				},
-				{
-					"backtrace" : 37,
-					"define" : "QT_NEEDS_QMAIN"
 				},
 				{
 					"backtrace" : 6,
@@ -405,37 +409,37 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "F:/Qt/excel/build/excel_autogen/include"
+					"path" : "F:/Qt/excel/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/include"
 				},
 				{
 					"backtrace" : 37,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/include/QtCore"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/include/QtCore"
 				},
 				{
 					"backtrace" : 37,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/include"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/include"
 				},
 				{
 					"backtrace" : 37,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/mkspecs/win32-g++"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/mkspecs/win32-msvc"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/include/QtWidgets"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/include/QtWidgets"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/include/QtGui"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/include/QtGui"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.5.3/mingw_64/include/QtAxContainer"
+					"path" : "C:/Qt/6.5.3/msvc2019_64/include/QtAxContainer"
 				}
 			],
 			"language" : "CXX",
@@ -454,7 +458,8 @@
 				1,
 				2,
 				5,
-				8
+				8,
+				11
 			]
 		}
 	],
@@ -488,110 +493,100 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-mwindows",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:windows",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6AxContainer.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6AxContainerd.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6AxBase.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6AxBased.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 22,
-				"fragment" : "-ladvapi32",
+				"fragment" : "advapi32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 22,
-				"fragment" : "-lgdi32",
+				"fragment" : "gdi32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 22,
-				"fragment" : "-lole32",
+				"fragment" : "ole32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 22,
-				"fragment" : "-loleaut32",
+				"fragment" : "oleaut32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 22,
-				"fragment" : "-luser32",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 22,
-				"fragment" : "-luuid",
+				"fragment" : "user32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6Widgets.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6Widgetsd.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 27,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6Gui.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6Guid.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 36,
-				"fragment" : "-ld3d11",
+				"fragment" : "d3d11.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 36,
-				"fragment" : "-ldxgi",
+				"fragment" : "dxgi.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 36,
-				"fragment" : "-ldxguid",
+				"fragment" : "dxguid.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 37,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6Core.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6Cored.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 43,
-				"fragment" : "-lmpr",
+				"fragment" : "mpr.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 43,
-				"fragment" : "-luserenv",
+				"fragment" : "userenv.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 52,
-				"fragment" : "-lmingw32",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 52,
-				"fragment" : "C:\\Qt\\6.5.3\\mingw_64\\lib\\libQt6EntryPoint.a",
+				"fragment" : "C:\\Qt\\6.5.3\\msvc2019_64\\lib\\Qt6EntryPointd.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 53,
-				"fragment" : "-lshell32",
+				"fragment" : "shell32.lib",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
 				"role" : "libraries"
 			}
 		],
@@ -614,7 +609,8 @@
 				1,
 				2,
 				5,
-				8
+				8,
+				11
 			]
 		},
 		{
@@ -625,23 +621,30 @@
 				6,
 				7,
 				10,
-				11
+				12,
+				13
+			]
+		},
+		{
+			"name" : "Forms",
+			"sourceIndexes" : 
+			[
+				4,
+				9
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4,
-				9,
-				12
+				14
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13
+				15
 			]
 		}
 	],
@@ -651,7 +654,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/excel_autogen/mocs_compilation.cpp",
+			"path" : "build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -704,28 +707,39 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "searchreplacewindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "searchreplacewindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/excel_autogen/include/ui_mainwindow.h",
+			"path" : "build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/excel_autogen/include/ui_newdialog.h",
+			"path" : "build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/include/ui_newdialog.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/excel_autogen/timestamp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/excel_autogen/timestamp.rule",
+			"path" : "build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/timestamp",
 			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/excel_autogen/timestamp.rule",
+			"sourceGroupIndex" : 4
 		}
 	],
 	"type" : "EXECUTABLE"

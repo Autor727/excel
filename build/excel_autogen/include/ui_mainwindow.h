@@ -28,12 +28,14 @@ public:
     QAction *actionOPen;
     QAction *actionSave;
     QAction *actionNew;
+    QAction *actionInsert;
+    QAction *actionDelete;
+    QAction *actionSearch;
     QWidget *centralwidget;
     QTableWidget *tableWidget;
     QMenuBar *menubar;
     QMenu *menu;
-    QMenu *menuInsert;
-    QMenu *menuDelete;
+    QMenu *menu_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -47,6 +49,12 @@ public:
         actionSave->setObjectName("actionSave");
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName("actionNew");
+        actionInsert = new QAction(MainWindow);
+        actionInsert->setObjectName("actionInsert");
+        actionDelete = new QAction(MainWindow);
+        actionDelete->setObjectName("actionDelete");
+        actionSearch = new QAction(MainWindow);
+        actionSearch->setObjectName("actionSearch");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         tableWidget = new QTableWidget(centralwidget);
@@ -58,21 +66,21 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 17));
         menu = new QMenu(menubar);
         menu->setObjectName("menu");
-        menuInsert = new QMenu(menubar);
-        menuInsert->setObjectName("menuInsert");
-        menuDelete = new QMenu(menubar);
-        menuDelete->setObjectName("menuDelete");
+        menu_2 = new QMenu(menubar);
+        menu_2->setObjectName("menu_2");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menu->menuAction());
-        menubar->addAction(menuInsert->menuAction());
-        menubar->addAction(menuDelete->menuAction());
+        menubar->addAction(menu_2->menuAction());
         menu->addAction(actionOPen);
         menu->addAction(actionSave);
         menu->addAction(actionNew);
+        menu_2->addAction(actionInsert);
+        menu_2->addAction(actionDelete);
+        menu_2->addAction(actionSearch);
 
         retranslateUi(MainWindow);
 
@@ -85,9 +93,11 @@ public:
         actionOPen->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200", nullptr));
         actionSave->setText(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230", nullptr));
         actionNew->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
+        actionInsert->setText(QCoreApplication::translate("MainWindow", "\346\217\222\345\205\245", nullptr));
+        actionDelete->setText(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        actionSearch->setText(QCoreApplication::translate("MainWindow", "\346\237\245\350\257\242", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
-        menuInsert->setTitle(QCoreApplication::translate("MainWindow", "\346\217\222\345\205\245", nullptr));
-        menuDelete->setTitle(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        menu_2->setTitle(QCoreApplication::translate("MainWindow", "\345\206\205\345\256\271", nullptr));
     } // retranslateUi
 
 };
